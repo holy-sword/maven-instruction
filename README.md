@@ -4,10 +4,12 @@
 
 详细教程：[https://www.w3cschool.cn/maven/](https://www.w3cschool.cn/maven/)
 
+
 ### 简单使用maven做什么？
 * 构建不依赖于IDE的标准化项目（导入IDE只需要以maven项目导入即可）
 * 目录结构统一并且简单，约定大于配置，被其他构建工具以及项目广泛采用
 * 统一对项目依赖的jar包进行管理，明确jar包依赖以及对应的版本自动下载等（[细节请看详细教程](https://www.w3cschool.cn/maven/)）
+
 
 ### maven的下载安装
 1. **下载**  
@@ -35,8 +37,9 @@ zip文件对应windows系统
 依旧从默认的注释中复制镜像出来，id与name可以随意起名，mirrorOf为central则说明是中央仓库，URL推荐填写阿里云maven仓库地址 [http://maven.aliyun.com/nexus/content/groups/public](http://maven.aliyun.com/nexus/content/groups/public)  
 之后保存，复制出一份存放在前面设置的maven全局文件存放目录下面（当替换maven版本时，内置的配置文件使用IDE设置好全局文件时可不用更改，更换maven版本也只是解压新版本后在IDE中设置新的maven安装路径就完成了）  
 
-### MyEclipse中的使用
-1. **配置maven**  
+
+### IDE中配置maven
+1. **MyEclipse**  
 点击导航栏window进入preferences搜索maven  
 ![](img/myeclipse-maven.png)  
 建议勾选Download Artifact Sources（下载jar包的同时下载源码，方便直接点方法进源码查看）  
@@ -44,4 +47,15 @@ zip文件对应windows系统
 添加安装的maven  
 ![](img/myeclipse-maven-settings.png)  
 设置好maven的全局配置文件路径（本地仓库存放目录自动扫描文件中的目录）  
-至此完成了MyEclipse中maven的配置
+至此完成了MyEclipse中maven的配置  
+
+2. **IDEA**
+不要在打开项目的时候选择file/settings，那样设置完只会针对当前项目，若打开了项目，则选择file/Close Project关闭项目回退到初始idea界面
+![](img/idea-settings.png)  
+指定好maven的安装目录以及配置文件位置  
+![](img/idea-maven.png)  
+![](img/idea-maven-importing.png)  
+至此完成了idea中的maven的配置
+
+
+### 创建一个maven的java web项目
