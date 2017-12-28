@@ -49,7 +49,7 @@ zip文件对应windows系统
 设置好maven的全局配置文件路径（本地仓库存放目录自动扫描文件中的目录）  
 至此完成了MyEclipse中maven的配置  
 
-2. **IDEA**
+2. **IDEA**  
 不要在打开项目的时候选择file/settings，那样设置完只会针对当前项目，若打开了项目，则选择file/Close Project关闭项目回退到初始idea界面
 ![](img/idea-settings.png)  
 指定好maven的安装目录以及配置文件位置  
@@ -59,3 +59,21 @@ zip文件对应windows系统
 
 
 ### 创建一个maven的java web项目
+1. **MyEclipse**  
+![](img/myeclipse-create01.png)  
+![](img/myeclipse-create02.png)  
+选取项目模板java web项目为maven-archetype-webapp  
+![](img/myeclipse-create03.png)  
+![](img/myeclipse-create04.png)  
+finish完成创建，第一次创建时需要下载一些jar包，会慢一点，至此就创建完毕了  
+
+2. **IDEA**  
+新建项目
+![](img/idea-create01.png)  
+![](img/idea-create02.png)  
+![](img/idea-create03.png)  
+![](img/idea-create04.png)  
+finish完成创建，第一次创建时需要下载一些jar包，会慢一点，至此就创建完毕了  
+
+
+### maven项目的目录结构
