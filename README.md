@@ -76,4 +76,22 @@ finish完成创建，第一次创建时需要下载一些jar包，会慢一点�
 finish完成创建，第一次创建时需要下载一些jar包，会慢一点，至此就创建完毕了  
 
 
-### maven项目的目录结构
+### maven项目的目录结构（未完成）
+```
+project
+│   README.md
+│   file001.txt    
+│
+└───folder1
+│   │   file011.txt
+│   │   file012.txt
+│   │
+│   └───subfolder1
+│       │   file111.txt
+│       │   file112.txt
+│       │   ...
+│   
+└───folder2
+    │   file021.txt
+    │   file022.txt
+```
