@@ -77,7 +77,7 @@ finish完成创建，第一次创建时需要下载一些jar包，会慢一点�
 
 
 ### maven的java web项目的目录结构
-[pom.xml项目配置文件例子](pom.xml)  
+[pom.xml项目配置文件例子，包含普通jar包引入，行间内置注释](pom.xml)  
 ![](img/maven-directory-javaweb.png)  
 ```
 project
@@ -108,7 +108,8 @@ project
 │        │   ...
 │    
 └───target（maven项目默认编译输出目录，自动生成）
-     │   ...
+          │   ...
 ```  
 1. java源码目录使用模板生成没有此文件夹，自行创建并设置为源码目录，MyEclipse设置方式为文件夹右键Build Path/Use as Source Folder，idea为右键Make Directory as/Sources Root
 2. resources资源文件目录在导入maven项目时此文件夹为普通文件夹，需要IDE设置为资源文件夹，MyEclipse设置方式同上，idea为右键Make Directory as/Resources Root
+3. 旧项目转化为maven项目，按照上述创建一个maven项目，直接打开2边的文件夹，直接拷贝到相应地方，删除多余jar包以及原来多余编译生成的文件即可，无需其余操作，反之把maven项目转化也一样（需要把编译目录下的jar包拷过去）
