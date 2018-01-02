@@ -76,22 +76,39 @@ finish完成创建，第一次创建时需要下载一些jar包，会慢一点�
 finish完成创建，第一次创建时需要下载一些jar包，会慢一点，至此就创建完毕了  
 
 
-### maven项目的目录结构（未完成）
+### maven的java web项目的目录结构
+[pom.xml项目配置文件例子](pom.xml)  
+![](img/maven-directory-javaweb.png)  
 ```
 project
-│   README.md
-│   file001.txt    
+│   pom.xml（maven项目配置文件）
 │
-└───folder1
-│   │   file011.txt
-│   │   file012.txt
+└───src（源码根目录）
 │   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
-```
+│   └───main（源码主目录）
+│   │   │
+│   │   └───java（java源码目录）
+│   │   │   │
+│   │   │   └───xxx（项目包名）
+│   │   │   └───sql（包名，有清空数据库在java源码目录下同级放置）
+│   │   │
+│   │   └───resources（源码所使用的资源文件目录，存放配置文件）
+│   │   │   │
+│   │   │   └───config（配置文件）
+│   │   │        │
+│   │   │        └───jdbc
+│   │   │        └───mybatis
+│   │   │        └───spring
+│   │   │
+│   │   └───webapp（web文件目录，等同于WebRoot）
+│   │   │
+│   │
+│   └───test（测试目录，测试用例等，小项目暂未使用）
+│        │   xxxTest.java
+│        │   ...
+│    
+└───target（maven项目默认编译输出目录，自动生成）
+     │   ...
+```  
+1. java源码目录使用模板生成没有此文件夹，自行创建并设置为源码目录，MyEclipse设置方式为文件夹右键Build Path/Use as Source Folder，idea为右键Make Directory as/Sources Root
+2. resources资源文件目录在导入maven项目时此文件夹为普通文件夹，需要IDE设置为资源文件夹，MyEclipse设置方式同上，idea为右键Make Directory as/Resources Root
