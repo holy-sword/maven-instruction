@@ -65,6 +65,14 @@
             <version>3.1</version>
         </dependency>
 
+        <!--httpclient4（3与4为不兼容升级，看情况选择）
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.5</version>
+        </dependency>
+        -->
+
         <!--权限-->
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -273,8 +281,6 @@
         </dependency>
 
     </dependencies>
-
-
 
 
     <!--项目构建-->
